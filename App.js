@@ -1,13 +1,22 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React from "react";
+import Header from "./app/Components/Header";
+import { StatusBar } from "expo-status-bar";
+import { View, Text, StyleSheet } from "react-native";
+import Constants from "expo-constants";
+import StoryList from "./app/Components/StoryList";
 
-export default function App() {
+const App = () => {
   return (
     <View style={styles.container}>
+      <Header />
+      <StoryList />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
-  container: {}
-});
+  container: {
+    paddingTop: Constants.statusBarHeight
+  }
+})
+export default App
